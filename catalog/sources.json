@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "repo": "seqeralabs/nextflow-plugin",
+      "kind": "Plugin",
+      "track": "生信与可复现流程",
+      "use": "面向 Claude 与 Codex 的 Nextflow 插件，提供流程开发 Skills 和 MCP 接入",
+      "evidence": "https://github.com/seqeralabs/nextflow-plugin",
+      "tier": "上游"
+    },
+    {
+      "repo": "anthropics/life-sciences",
+      "kind": "Marketplace",
+      "track": "生信与可复现流程",
+      "use": "生命科学插件发布目录；本站关注其中的单细胞与分析质量控制",
+      "evidence": "https://github.com/anthropics/life-sciences",
+      "tier": "上游"
+    },
+    {
+      "repo": "Delphine-L/claude_global",
+      "kind": "Skill",
+      "track": "生信与可复现流程",
+      "use": "Galaxy 工作流与科研图表的社区 Skills",
+      "evidence": "https://github.com/Delphine-L/claude_global",
+      "tier": "社区"
+    },
+    {
+      "repo": "galaxyproject/galaxy-mcp",
+      "kind": "MCP",
+      "track": "生信与可复现流程",
+      "use": "Galaxy 生物信息学平台的 MCP 接口",
+      "evidence": "https://galaxyproject.github.io/orbit/docs/galaxy-mcp/",
+      "tier": "上游"
+    },
+    {
+      "repo": "galaxyproject/galaxy-skills",
+      "kind": "Skill",
+      "track": "生信与可复现流程",
+      "use": "记录 Galaxy 分析历史与数据集合、复用分析流程",
+      "evidence": "https://github.com/galaxyproject/galaxy-skills",
+      "tier": "上游"
+    },
+    {
+      "repo": "fmdelgado/biodatafinder",
+      "kind": "MCP",
+      "track": "生信与可复现流程",
+      "use": "检索公开组学数据集的元数据",
+      "evidence": "https://github.com/fmdelgado/biodatafinder",
+      "tier": "社区"
+    },
+    {
+      "repo": "MCPmed/GEOmcp",
+      "kind": "MCP",
+      "track": "生信与可复现流程",
+      "use": "NCBI GEO 数据集元数据的检索与查询",
+      "evidence": "https://github.com/MCPmed/GEOmcp",
+      "tier": "社区"
+    },
+    {
+      "repo": "rcsb/rcsb-mcp",
+      "kind": "MCP",
+      "track": "蛋白结构与证据",
+      "use": "引用、整理并检索 RCSB PDB 公开结构元数据",
+      "evidence": "https://github.com/rcsb/rcsb-mcp",
+      "tier": "上游"
+    },
+    {
+      "repo": "smaniches/uniprot-mcp",
+      "kind": "MCP",
+      "track": "蛋白结构与证据",
+      "use": "带版本与来源信息的公开 UniProt 注释查询",
+      "evidence": "https://github.com/smaniches/uniprot-mcp",
+      "tier": "社区"
+    },
+    {
+      "repo": "molstar/VSCoding-Sequence",
+      "kind": "Extension",
+      "track": "蛋白结构与证据",
+      "use": "在 VS Code 中查看分子结构，辅助人工核对",
+      "evidence": "https://github.com/molstar/VSCoding-Sequence",
+      "tier": "上游"
+    },
+    {
+      "repo": "mahynotch/chimerax-mcp",
+      "kind": "MCP",
+      "track": "蛋白结构与证据",
+      "use": "通过 ChimeraX 可视化已有分子结构",
+      "evidence": "https://github.com/mahynotch/chimerax-mcp",
+      "tier": "社区"
+    },
+    {
+      "repo": "CoChatAI/europepmc-mcp-server",
+      "kind": "MCP",
+      "track": "科研证据与可追溯性",
+      "use": "Europe PMC 论文与引用元数据查询",
+      "evidence": "https://github.com/CoChatAI/europepmc-mcp-server",
+      "tier": "社区"
+    }
+  ]
+}
