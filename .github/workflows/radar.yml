@@ -1,0 +1,65 @@
+name: Refresh LifeSci Skill Radar
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 08:17 Beijing, every day. Previous week/month rollups are computed in the app.
+    - cron: "17 0 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lifesci-radar-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install the verified first-edition bundle once
+        shell: bash
+        run: |
+          if [ -f radar-publication.zip ]; then
+            echo '96e260279267f6ad2854294ca7187a901e8aa6d0afc6e275150e65dc7604b226  radar-publication.zip' | sha256sum -c -
+            python3 - <<'PYBOOT'
+          from pathlib import Path
+          from zipfile import ZipFile
+          files = (
+              '.gitignore', 'METHODOLOGY.md', 'README.md', 'catalog/README.md',
+              'catalog/sources.json', 'radar/__init__.py', 'radar/update.py',
+              'reports/README.md', 'tests/test_update.py',
+          )
+          with ZipFile('radar-publication.zip') as package:
+              for name in files:
+                  target = Path(name)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(package.read(name))
+          PYBOOT
+          fi
+      - name: Test and refresh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 -m radar.update
+      - name: Publish verified snapshots and reports
+        shell: bash
+        run: |
+          if [ -f radar-publication.zip ]; then
+            git rm -- radar-publication.zip
+            git add -- .gitignore METHODOLOGY.md README.md catalog/ radar/ tests/
+          fi
+          git add -- snapshots/ catalog/README.md reports/
+          if git diff --cached --quiet; then
+            echo "No new data."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'data: refresh LifeSci Skill Radar'
+          git push
