@@ -1,16 +1,16 @@
 # 每日雷达 / Daily radar
 
-北京时间 **2026-11-27**｜GitHub 星数采集成功：12/12。
-[原始快照](../snapshots/2026-11-27.json) · [周报和月报](../reports/README.md)
+北京时间 **2026-11-28**｜GitHub 星数采集成功：12/12。
+[原始快照](../snapshots/2026-11-28.json) · [周报和月报](../reports/README.md)
 
 | 排名 | 来源 | 类型 | 来源归属 | 星数 | Δ1日 | Δ7日 | 排名↑ | 最近推送 (UTC) | 状态 |
 |---:|---|---|---|---:|---:|---:|---:|---|---|
-| 1 | [anthropics/life-sciences](https://github.com/anthropics/life-sciences) | Marketplace | 上游 | 660 | +3 | — | 0 | 2026-11-20 | ok |
+| 1 | [anthropics/life-sciences](https://github.com/anthropics/life-sciences) | Marketplace | 上游 | 660 | 0 | — | 0 | 2026-11-20 | ok |
 | 2 | [molstar/VSCoding-Sequence](https://github.com/molstar/VSCoding-Sequence) | Extension | 上游 | 130 | 0 | — | 0 | 2026-11-21 | ok |
-| 3 | [galaxyproject/galaxy-mcp](https://github.com/galaxyproject/galaxy-mcp) | MCP | 上游 | 40 | 0 | — | 0 | 2026-11-25 | ok |
+| 3 | [galaxyproject/galaxy-mcp](https://github.com/galaxyproject/galaxy-mcp) | MCP | 上游 | 40 | 0 | — | 0 | 2026-11-27 | ok |
 | 4 | [Delphine-L/claude_global](https://github.com/Delphine-L/claude_global) | Skill | 社区 | 23 | 0 | — | 0 | 2026-11-05 | ok |
 | 5 | [MCPmed/GEOmcp](https://github.com/MCPmed/GEOmcp) | MCP | 社区 | 18 | 0 | — | 0 | 2026-04-20 | ok |
-| 6 | [rcsb/rcsb-mcp](https://github.com/rcsb/rcsb-mcp) | MCP | 上游 | 13 | +1 | — | 0 | 2026-10-23 | ok |
+| 6 | [rcsb/rcsb-mcp](https://github.com/rcsb/rcsb-mcp) | MCP | 上游 | 13 | 0 | — | 0 | 2026-10-23 | ok |
 | 7 | [seqeralabs/nextflow-plugin](https://github.com/seqeralabs/nextflow-plugin) | Plugin | 上游 | 10 | 0 | — | 0 | 2026-11-20 | ok |
 | 8 | [galaxyproject/galaxy-skills](https://github.com/galaxyproject/galaxy-skills) | Skill | 上游 | 7 | 0 | — | 0 | 2026-11-10 | ok |
 | 9 | [mahynotch/chimerax-mcp](https://github.com/mahynotch/chimerax-mcp) | MCP | 社区 | 3 | 0 | — | 0 | 2026-04-02 | ok |
